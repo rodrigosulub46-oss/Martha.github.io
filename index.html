@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Postres Martha Euan | Postres hechos con amor</title>
-<meta name="description" content="Deliciosos pasteles de galletas y flanes de Postres Martha Euan. Pedidos por WhatsApp y entregas en Xtepén y Umán, Yucatán.">
+<meta name="description" content="Pasteles de galletas y flanes. Pedidos por WhatsApp y entregas en Xtepén y Umán, Yucatán.">
 
 <style>
 :root {
@@ -15,9 +15,7 @@
   --rosa-oscuro: #ad456c;
   --cafe: #69402f;
   --cafe-oscuro: #422719;
-  --blanco: #ffffff;
   --borde: #efd0d9;
-  --sombra: 0 5px 18px #69402f18;
 }
 
 * {
@@ -26,9 +24,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -40,18 +36,12 @@ body {
 header {
   background: var(--cafe);
   color: white;
-  padding: 16px 5%;
   text-align: center;
+  padding: 18px 5%;
 }
 
-.logo {
-  font-size: 27px;
-  font-weight: bold;
-}
-
-header p {
-  color: var(--rosa);
-}
+.logo { font-size: 27px; font-weight: bold; }
+header p { color: var(--rosa); }
 
 nav {
   background: var(--rosa);
@@ -59,20 +49,18 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 nav a {
   color: var(--cafe);
   text-decoration: none;
   font-weight: bold;
-  padding: 6px 10px;
+  padding: 6px 9px;
   border-radius: 15px;
 }
 
-nav a:hover {
-  background: white;
-}
+nav a:hover { background: white; }
 
 .hero {
   text-align: center;
@@ -81,13 +69,12 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(30px, 6vw, 48px);
+  font-size: clamp(30px, 6vw, 46px);
   margin-bottom: 12px;
-  color: var(--cafe);
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto 22px;
   font-size: 18px;
 }
@@ -96,12 +83,13 @@ nav a:hover {
   display: inline-block;
   background: var(--rosa-fuerte);
   color: white;
-  padding: 12px 22px;
+  padding: 12px 20px;
+  border: none;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  border: none;
   cursor: pointer;
+  font-size: 15px;
   transition: 0.2s;
 }
 
@@ -111,7 +99,7 @@ nav a:hover {
 }
 
 .seccion {
-  padding: 48px 6%;
+  padding: 45px 6%;
   scroll-margin-top: 20px;
 }
 
@@ -123,17 +111,12 @@ nav a:hover {
 
 .descripcion {
   text-align: center;
-  max-width: 650px;
-  margin: 0 auto 28px;
+  max-width: 700px;
+  margin: 0 auto 25px;
 }
 
-.seccion-rosa {
-  background: var(--rosa);
-}
-
-.seccion-blanca {
-  background: white;
-}
+.seccion-rosa { background: var(--rosa); }
+.seccion-blanca { background: white; }
 
 .colores {
   display: flex;
@@ -145,65 +128,57 @@ nav a:hover {
 }
 
 .opcion-color {
-  min-width: 115px;
+  min-width: 110px;
+  padding: 12px;
   border: 2px solid var(--borde);
-  border-radius: 16px;
+  border-radius: 15px;
   background: white;
   color: var(--cafe);
-  padding: 12px;
-  cursor: pointer;
   font-weight: bold;
-}
-
-.opcion-color:hover,
-.opcion-color:focus {
-  outline: 3px solid var(--rosa-fuerte);
-  outline-offset: 2px;
+  cursor: pointer;
 }
 
 .muestra {
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   margin: 0 auto 7px;
-  border: 2px solid #00000020;
+  border: 1px solid #0002;
 }
 
 .productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
+  gap: 24px;
   max-width: 950px;
   margin: 30px auto 0;
 }
 
 .producto {
   background: white;
+  border: 1px solid var(--borde);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: var(--sombra);
-  border: 1px solid var(--borde);
   text-align: center;
   padding-bottom: 24px;
+  box-shadow: 0 5px 18px #69402f18;
 }
 
 .producto img {
-  display: block;
   width: 100%;
   height: 245px;
   object-fit: cover;
+  display: block;
   background: var(--rosa);
 }
 
 .producto h3 {
   font-size: 22px;
-  margin: 16px 10px 5px;
+  margin: 15px 10px 5px;
 }
 
-.producto p {
-  padding: 0 15px;
-}
+.producto p { padding: 0 15px; }
 
 .precio {
   font-size: 27px;
@@ -212,41 +187,32 @@ nav a:hover {
   margin: 10px 0 15px;
 }
 
-.producto .boton {
-  margin: 0 10px;
-}
-
 .tarjetas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   max-width: 900px;
-  margin: 28px auto 0;
+  margin: 25px auto;
 }
 
 .tarjeta {
-  padding: 24px;
   background: white;
   border: 1px solid var(--borde);
   border-radius: 16px;
+  padding: 23px;
   text-align: center;
 }
 
-.tarjeta .emoji {
-  font-size: 35px;
-}
-
-.tarjeta h3 {
-  margin: 8px 0;
-}
+.emoji { font-size: 35px; }
+.tarjeta h3 { margin: 8px 0; }
 
 .formulario {
   max-width: 560px;
-  margin: 25px auto 0;
+  margin: 25px auto;
   padding: 25px;
   background: white;
   border-radius: 18px;
-  box-shadow: var(--sombra);
+  box-shadow: 0 5px 18px #69402f18;
 }
 
 .formulario label {
@@ -267,40 +233,26 @@ nav a:hover {
   background: white;
 }
 
-.formulario textarea {
-  resize: vertical;
-}
-
-.formulario .boton {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 16px;
-}
+.formulario textarea { resize: vertical; }
+.formulario .boton { width: 100%; margin-top: 20px; }
 
 details {
   background: white;
   padding: 17px;
+  border: 1px solid var(--borde);
   border-radius: 12px;
   margin: 12px auto;
   max-width: 750px;
-  border: 1px solid var(--borde);
 }
 
-summary {
-  cursor: pointer;
-  font-weight: bold;
-}
-
-details p {
-  padding-top: 10px;
-}
+summary { cursor: pointer; font-weight: bold; }
+details p { padding-top: 10px; }
 
 .redes {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
   justify-content: center;
-  margin-top: 22px;
+  gap: 12px;
 }
 
 footer {
@@ -310,39 +262,51 @@ footer {
   padding: 28px 15px;
 }
 
-footer a {
-  color: var(--rosa);
+footer a { color: var(--rosa); }
+
+/* Botón flotante de música */
+.boton-musica {
+  position: fixed;
+  left: 12px;
+  bottom: 15px;
+  z-index: 20;
+  background: var(--cafe);
+  color: white;
+  border: 2px solid var(--rosa);
+  border-radius: 28px;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px #0003;
+  cursor: pointer;
+}
+
+.boton-musica:hover {
+  background: var(--rosa-oscuro);
 }
 
 .whatsapp-flotante {
   position: fixed;
-  right: 16px;
-  bottom: 18px;
+  right: 12px;
+  bottom: 15px;
+  z-index: 20;
   background: #168b51;
   color: white;
+  padding: 12px 15px;
+  border-radius: 28px;
   text-decoration: none;
-  padding: 13px 17px;
-  border-radius: 30px;
   font-weight: bold;
   box-shadow: 0 4px 12px #0003;
-  z-index: 10;
 }
 
 @media (max-width: 500px) {
-  .seccion {
-    padding: 38px 5%;
-  }
-
-  .hero {
-    padding: 45px 16px;
-  }
-
-  .producto img {
-    height: 220px;
-  }
-
-  .logo {
-    font-size: 23px;
+  .seccion { padding: 38px 5%; }
+  .hero { padding: 45px 16px; }
+  .producto img { height: 220px; }
+  .logo { font-size: 23px; }
+  .boton-musica, .whatsapp-flotante {
+    font-size: 12px;
+    padding: 11px;
   }
 }
 </style>
@@ -377,94 +341,73 @@ footer a {
   <a class="boton" href="#pedidos">📱 Hacer un pedido</a>
 </section>
 
-<!-- APARTADO PARA CAMBIAR COLORES -->
+<!-- SELECTOR DE COLORES -->
 <section class="seccion seccion-blanca" id="colores">
   <h2>🎨 Escoge tu color</h2>
-  <p class="descripcion">
-    ¡Personaliza los colores de nuestra página a tu gusto!
-    Puedes volver al rosa y café cuando quieras.
-  </p>
+  <p class="descripcion">¡Personaliza nuestra página con tu color favorito!</p>
 
   <div class="colores">
-    <button class="opcion-color" onclick="cambiarColor('rosa')" aria-label="Elegir rosa y café">
+    <button class="opcion-color" onclick="cambiarColor('rosa')">
       <span class="muestra" style="background:linear-gradient(135deg,#f7dce5 50%,#69402f 50%)"></span>
       🌸 Rosa y café
     </button>
-
-    <button class="opcion-color" onclick="cambiarColor('azul')" aria-label="Elegir azul">
+    <button class="opcion-color" onclick="cambiarColor('azul')">
       <span class="muestra" style="background:linear-gradient(135deg,#dcecff 50%,#28527a 50%)"></span>
       💙 Azul
     </button>
-
-    <button class="opcion-color" onclick="cambiarColor('verde')" aria-label="Elegir verde">
+    <button class="opcion-color" onclick="cambiarColor('verde')">
       <span class="muestra" style="background:linear-gradient(135deg,#d9f2df 50%,#286744 50%)"></span>
       💚 Verde
     </button>
-
-    <button class="opcion-color" onclick="cambiarColor('dorado')" aria-label="Elegir dorado">
+    <button class="opcion-color" onclick="cambiarColor('dorado')">
       <span class="muestra" style="background:linear-gradient(135deg,#fff0c2 50%,#8a6415 50%)"></span>
       ✨ Dorado
     </button>
-
-    <button class="opcion-color" onclick="cambiarColor('morado')" aria-label="Elegir morado">
+    <button class="opcion-color" onclick="cambiarColor('morado')">
       <span class="muestra" style="background:linear-gradient(135deg,#eadcff 50%,#604080 50%)"></span>
       💜 Morado
     </button>
-
-    <button class="opcion-color" onclick="cambiarColor('naranja')" aria-label="Elegir naranja">
+    <button class="opcion-color" onclick="cambiarColor('naranja')">
       <span class="muestra" style="background:linear-gradient(135deg,#ffe1c9 50%,#98491e 50%)"></span>
       🧡 Naranja
     </button>
   </div>
-
   <p class="descripcion" id="mensaje-color" aria-live="polite">
     Color seleccionado: rosa y café 💗
   </p>
 </section>
 
-<!-- MENU DE POSTRES -->
+<!-- MENU -->
 <section class="seccion seccion-rosa" id="menu">
   <h2>🍮 Nuestro menú</h2>
-  <p class="descripcion">
-    Elige tu postre favorito y haz tu pedido por WhatsApp.
-  </p>
+  <p class="descripcion">Elige tu postre favorito y haz tu pedido por WhatsApp.</p>
 
   <div class="productos">
-
     <article class="producto">
-      <img
-        src="https://i.ibb.co/zhZn3MJt/IMG-20261018-WA0012.jpg"
-        alt="Pastel de galletas"
-        loading="lazy"
-        onerror="this.style.display='none'">
-
+      <img src="https://i.ibb.co/zhZn3MJt/IMG-20261018-WA0012.jpg"
+           alt="Pastel de galletas" loading="lazy">
       <h3>🍪 Pastel de galletas</h3>
       <p>Un delicioso pastel para compartir en familia o celebrar una ocasión especial.</p>
       <div class="precio">$250 MXN</div>
-      <a class="boton" href="https://wa.me/529995309290?text=Hola%2C%20quiero%20pedir%20un%20pastel%20de%20galletas%20de%20%24250." target="_blank" rel="noopener">
-        Pedir pastel
-      </a>
+      <a class="boton"
+         href="https://wa.me/529995309290?text=Hola%2C%20quiero%20pedir%20un%20pastel%20de%20galletas%20de%20%24250."
+         target="_blank" rel="noopener">Pedir pastel</a>
     </article>
 
     <article class="producto">
-      <img
-        src="https://i.ibb.co/vCgHgd9Q/IMG-20261018-WA0009.jpg"
-        alt="Flan casero"
-        loading="lazy"
-        onerror="this.style.display='none'">
-
+      <img src="https://i.ibb.co/vCgHgd9Q/IMG-20261018-WA0009.jpg"
+           alt="Flan casero" loading="lazy">
       <h3>🍮 Flan</h3>
       <p>Un rico flan para disfrutar de un momento dulce.</p>
       <div class="precio">$150 MXN</div>
-      <a class="boton" href="https://wa.me/529995309290?text=Hola%2C%20quiero%20pedir%20un%20flan%20de%20%24150." target="_blank" rel="noopener">
-        Pedir flan
-      </a>
+      <a class="boton"
+         href="https://wa.me/529995309290?text=Hola%2C%20quiero%20pedir%20un%20flan%20de%20%24150."
+         target="_blank" rel="noopener">Pedir flan</a>
     </article>
-
   </div>
 </section>
 
-<!-- SOBRE NOSOTROS -->
+<!-- NOSOTROS -->
 <section class="seccion seccion-blanca" id="nosotros">
   <h2>💗 Sobre nosotros</h2>
   <p class="descripcion">
@@ -479,17 +422,15 @@ footer a {
       <h3>Hechos con cariño</h3>
       <p>Cada postre está pensado para disfrutar y compartir.</p>
     </div>
-
     <div class="tarjeta">
       <div class="emoji">💗</div>
-      <h3>Para tus momentos especiales</h3>
+      <h3>Momentos especiales</h3>
       <p>Endulza tus reuniones, cumpleaños y días especiales.</p>
     </div>
-
     <div class="tarjeta">
       <div class="emoji">📱</div>
       <h3>Pedidos fáciles</h3>
-      <p>Escríbenos por WhatsApp para consultar y hacer tu pedido.</p>
+      <p>Escríbenos por WhatsApp para hacer tu pedido.</p>
     </div>
   </div>
 </section>
@@ -497,59 +438,49 @@ footer a {
 <!-- ENTREGAS -->
 <section class="seccion seccion-rosa" id="entregas">
   <h2>🏠 Entregas a domicilio</h2>
-  <p class="descripcion">
-    ¡Disfruta tus postres sin salir de casa!
-  </p>
+  <p class="descripcion">¡Disfruta tus postres sin salir de casa!</p>
 
   <div class="tarjetas">
     <div class="tarjeta">
       <div class="emoji">📍</div>
       <h3>Xtepén, Yucatán</h3>
-      <p>Consulta por WhatsApp la disponibilidad de tu entrega.</p>
+      <p>Consulta por WhatsApp la disponibilidad de entrega.</p>
     </div>
-
     <div class="tarjeta">
       <div class="emoji">🚗</div>
       <h3>Umán, Yucatán</h3>
-      <p>Pregunta por las opciones de entrega y sus posibles costos.</p>
+      <p>Pregunta por las opciones y los posibles costos de entrega.</p>
     </div>
   </div>
 
-  <p class="descripcion" style="margin-top:25px">
-    Confirma el horario, la dirección y el costo de entrega
-    antes de realizar tu pedido.
+  <p class="descripcion">
+    Confirma el horario, la dirección y el costo de entrega antes de realizar tu pedido.
   </p>
-
-  <div style="text-align:center">
-    <a class="boton" href="https://wa.me/529995309290?text=Hola%2C%20quiero%20consultar%20las%20entregas%20a%20domicilio." target="_blank" rel="noopener">
-      Consultar entregas
-    </a>
-  </div>
 </section>
 
-<!-- FORMULARIO DE PEDIDOS -->
+<!-- PEDIDOS -->
 <section class="seccion seccion-blanca" id="pedidos">
   <h2>📱 Haz tu pedido</h2>
   <p class="descripcion">
-    Completa los datos y se abrirá WhatsApp con tu mensaje listo para enviar.
+    Completa los datos y WhatsApp se abrirá con tu mensaje listo para enviar.
   </p>
 
   <form class="formulario" id="formulario-pedido">
     <label for="nombre">Tu nombre</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+    <input type="text" id="nombre" required placeholder="Escribe tu nombre">
 
     <label for="postre">¿Qué postre quieres?</label>
-    <select id="postre" name="postre" required>
+    <select id="postre" required>
       <option value="">Selecciona un postre</option>
       <option value="Pastel de galletas - $250 MXN">Pastel de galletas - $250</option>
       <option value="Flan - $150 MXN">Flan - $150</option>
     </select>
 
     <label for="cantidad">Cantidad</label>
-    <input type="number" id="cantidad" name="cantidad" min="1" max="50" value="1" required>
+    <input type="number" id="cantidad" min="1" max="50" value="1" required>
 
     <label for="entrega">¿Dónde quieres recibirlo?</label>
-    <select id="entrega" name="entrega" required>
+    <select id="entrega" required>
       <option value="">Selecciona una opción</option>
       <option value="Xtepén, Yucatán">Xtepén, Yucatán</option>
       <option value="Umán, Yucatán">Umán, Yucatán</option>
@@ -557,13 +488,13 @@ footer a {
     </select>
 
     <label for="direccion">Dirección o referencias (opcional)</label>
-    <input type="text" id="direccion" name="direccion" placeholder="Escribe tu dirección o referencias">
+    <input type="text" id="direccion" placeholder="Dirección o referencias">
 
     <label for="fecha">Fecha deseada (opcional)</label>
-    <input type="date" id="fecha" name="fecha">
+    <input type="date" id="fecha">
 
     <label for="comentarios">Comentarios (opcional)</label>
-    <textarea id="comentarios" name="comentarios" rows="3" placeholder="¿Tienes alguna indicación?"></textarea>
+    <textarea id="comentarios" rows="3" placeholder="Escribe tus indicaciones"></textarea>
 
     <button class="boton" type="submit">💬 Continuar por WhatsApp</button>
   </form>
@@ -578,48 +509,37 @@ footer a {
     <summary>¿Cuánto cuesta el pastel de galletas?</summary>
     <p>El pastel de galletas cuesta $250 MXN.</p>
   </details>
-
   <details>
     <summary>¿Cuánto cuesta el flan?</summary>
     <p>El flan cuesta $150 MXN.</p>
   </details>
-
   <details>
     <summary>¿Hay entregas a domicilio?</summary>
-    <p>Consulta la disponibilidad de entregas en Xtepén y Umán, Yucatán, directamente por WhatsApp.</p>
+    <p>Consulta la disponibilidad de entrega en Xtepén y Umán, Yucatán, por WhatsApp.</p>
   </details>
-
   <details>
     <summary>¿Cómo hago un pedido?</summary>
-    <p>Elige un postre del menú o completa el formulario. WhatsApp se abrirá con tu mensaje para que puedas enviarlo.</p>
+    <p>Elige un postre o completa el formulario y envía el mensaje por WhatsApp.</p>
   </details>
-
   <details>
-    <summary>¿Puedo consultar algo antes de comprar?</summary>
-    <p>¡Claro! Envíanos un mensaje por WhatsApp y consulta tus dudas.</p>
+    <summary>¿Puedo preguntar antes de comprar?</summary>
+    <p>¡Claro! Envíanos un mensaje y con gusto podrás consultar tus dudas.</p>
   </details>
 </section>
 
-<!-- CONTACTO Y REDES -->
+<!-- CONTACTO -->
 <section class="seccion seccion-blanca" id="contacto">
   <h2>📲 Contáctanos</h2>
-  <p class="descripcion">
-    ¡Estamos listos para atender tu pedido!
-  </p>
-
+  <p class="descripcion">¡Estamos listos para atender tu pedido!</p>
   <div class="redes">
     <a class="boton" href="https://wa.me/529995309290" target="_blank" rel="noopener">
       💬 WhatsApp
     </a>
-
     <a class="boton" href="https://www.tiktok.com/" target="_blank" rel="noopener">
       🎵 TikTok
     </a>
   </div>
-
-  <p class="descripcion" style="margin-top:20px">
-    WhatsApp: 999 530 9290
-  </p>
+  <p class="descripcion" style="margin-top:20px">WhatsApp: 999 530 9290</p>
 </section>
 
 </main>
@@ -632,75 +552,54 @@ footer a {
   <p><a href="#inicio">Volver al inicio ↑</a></p>
 </footer>
 
+<!-- REPRODUCTOR DE PIANO -->
+<audio id="musica-fondo" loop preload="none">
+  <source src="piano-relajante.mp3" type="audio/mpeg">
+  Tu navegador no puede reproducir audio.
+</audio>
+
+<button class="boton-musica" id="boton-musica"
+        type="button" aria-pressed="false">
+  ▶️ Reproducir piano
+</button>
+
 <a class="whatsapp-flotante"
    href="https://wa.me/529995309290"
-   target="_blank"
-   rel="noopener"
-   aria-label="Contactar por WhatsApp">
+   target="_blank" rel="noopener">
   💬 WhatsApp
 </a>
 
 <script>
 const temas = {
   rosa: {
-    rosa: "#f7dce5",
-    claro: "#fff5f7",
-    fuerte: "#cf6489",
-    oscuro: "#ad456c",
-    cafe: "#69402f",
-    cafeOscuro: "#422719",
-    borde: "#efd0d9",
-    nombre: "rosa y café 💗"
+    rosa:"#f7dce5", claro:"#fff5f7", fuerte:"#cf6489",
+    oscuro:"#ad456c", cafe:"#69402f", cafeOscuro:"#422719",
+    borde:"#efd0d9", nombre:"rosa y café 💗"
   },
   azul: {
-    rosa: "#dcecff",
-    claro: "#f4f9ff",
-    fuerte: "#477eb8",
-    oscuro: "#28527a",
-    cafe: "#28527a",
-    cafeOscuro: "#183852",
-    borde: "#c5ddf5",
-    nombre: "azul 💙"
+    rosa:"#dcecff", claro:"#f4f9ff", fuerte:"#477eb8",
+    oscuro:"#28527a", cafe:"#28527a", cafeOscuro:"#183852",
+    borde:"#c5ddf5", nombre:"azul 💙"
   },
   verde: {
-    rosa: "#d9f2df",
-    claro: "#f4fff6",
-    fuerte: "#438c5e",
-    oscuro: "#286744",
-    cafe: "#286744",
-    cafeOscuro: "#17432b",
-    borde: "#bfe2c9",
-    nombre: "verde 💚"
+    rosa:"#d9f2df", claro:"#f4fff6", fuerte:"#438c5e",
+    oscuro:"#286744", cafe:"#286744", cafeOscuro:"#17432b",
+    borde:"#bfe2c9", nombre:"verde 💚"
   },
   dorado: {
-    rosa: "#fff0c2",
-    claro: "#fffaf0",
-    fuerte: "#b88b2e",
-    oscuro: "#8a6415",
-    cafe: "#76531c",
-    cafeOscuro: "#4d3510",
-    borde: "#f0dfae",
-    nombre: "dorado ✨"
+    rosa:"#fff0c2", claro:"#fffaf0", fuerte:"#b88b2e",
+    oscuro:"#8a6415", cafe:"#76531c", cafeOscuro:"#4d3510",
+    borde:"#f0dfae", nombre:"dorado ✨"
   },
   morado: {
-    rosa: "#eadcff",
-    claro: "#faf6ff",
-    fuerte: "#9064bd",
-    oscuro: "#604080",
-    cafe: "#604080",
-    cafeOscuro: "#39244f",
-    borde: "#ddc9f3",
-    nombre: "morado 💜"
+    rosa:"#eadcff", claro:"#faf6ff", fuerte:"#9064bd",
+    oscuro:"#604080", cafe:"#604080", cafeOscuro:"#39244f",
+    borde:"#ddc9f3", nombre:"morado 💜"
   },
   naranja: {
-    rosa: "#ffe1c9",
-    claro: "#fff7f0",
-    fuerte: "#c76d36",
-    oscuro: "#98491e",
-    cafe: "#98491e",
-    cafeOscuro: "#632e13",
-    borde: "#f3d0b6",
-    nombre: "naranja 🧡"
+    rosa:"#ffe1c9", claro:"#fff7f0", fuerte:"#c76d36",
+    oscuro:"#98491e", cafe:"#98491e", cafeOscuro:"#632e13",
+    borde:"#f3d0b6", nombre:"naranja 🧡"
   }
 };
 
@@ -709,7 +608,6 @@ function cambiarColor(nombre) {
   if (!tema) return;
 
   const raiz = document.documentElement;
-
   raiz.style.setProperty("--rosa", tema.rosa);
   raiz.style.setProperty("--rosa-claro", tema.claro);
   raiz.style.setProperty("--rosa-fuerte", tema.fuerte);
@@ -722,6 +620,32 @@ function cambiarColor(nombre) {
     "Color seleccionado: " + tema.nombre;
 }
 
+/* Música: reproducir y pausar con un botón */
+const musica = document.getElementById("musica-fondo");
+const botonMusica = document.getElementById("boton-musica");
+
+botonMusica.addEventListener("click", async function() {
+  if (musica.paused) {
+    try {
+      await musica.play();
+      botonMusica.textContent = "⏸️ Pausar piano";
+      botonMusica.setAttribute("aria-pressed", "true");
+    } catch (error) {
+      alert("No se pudo reproducir la música. Comprueba que el archivo piano-relajante.mp3 esté subido junto a index.html.");
+    }
+  } else {
+    musica.pause();
+    botonMusica.textContent = "▶️ Reproducir piano";
+    botonMusica.setAttribute("aria-pressed", "false");
+  }
+});
+
+musica.addEventListener("ended", function() {
+  botonMusica.textContent = "▶️ Reproducir piano";
+  botonMusica.setAttribute("aria-pressed", "false");
+});
+
+/* Formulario de pedidos */
 document.getElementById("formulario-pedido").addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -733,7 +657,8 @@ document.getElementById("formulario-pedido").addEventListener("submit", function
   const fecha = document.getElementById("fecha").value;
   const comentarios = document.getElementById("comentarios").value.trim();
 
-  if (!nombre || !postre || !entrega || !Number.isInteger(cantidad) || cantidad < 1) {
+  if (!nombre || !postre || !entrega ||
+      !Number.isInteger(cantidad) || cantidad < 1) {
     alert("Por favor, revisa los datos de tu pedido.");
     return;
   }
@@ -745,7 +670,7 @@ document.getElementById("formulario-pedido").addEventListener("submit", function
   mensaje += "Cantidad: " + cantidad + "\n";
   mensaje += "Entrega: " + entrega + "\n";
 
-  if (direccion) mensaje += "Dirección o referencias: " + direccion + "\n";
+  if (direccion) mensaje += "Dirección: " + direccion + "\n";
   if (fecha) mensaje += "Fecha deseada: " + fecha + "\n";
   if (comentarios) mensaje += "Comentarios: " + comentarios + "\n";
 

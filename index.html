@@ -2,66 +2,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Postres Martha Euan</title>
-<style>
-body {
-  margin: 0;
-  padding: 25px 12px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background: #fff0a8;
-  color: #914d63;
-}
-header, .info, .flan {
-  background: #fffaf5;
-  border: 2px solid #efb0c5;
-  border-radius: 22px;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 600px;
-}
-h1 { color: #b64f78; }
-h2 { color: #c76c8e; font-size: 18px; }
-.info p { font-size: 20px; font-weight: bold; }
-.postres {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-.flan { flex: 1 1 220px; }
-.dibujo { font-size: 90px; margin: 15px; }
-.flores { color: #e78fb0; font-size: 28px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postres Martha Euan</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", sans-serif;
+      background: #fff1a8;
+      color: #61351f;
+      text-align: center;
+    }
+
+    .pagina {
+      min-height: 100vh;
+      padding: 35px 15px;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(circle, #ffe0e9 2px, transparent 3px)
+        0 0 / 35px 35px,
+        #fff1a8;
+    }
+
+    .flores {
+      color: #ee83a5;
+      font-size: 30px;
+      letter-spacing: 8px;
+      margin: 12px 0;
+    }
+
+    h1 {
+      color: #9b4e3e;
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 7vw, 58px);
+      margin: 12px 0;
+      text-shadow: 2px 2px #ffffff;
+    }
+
+    .subtitulo {
+      color: #d65f8b;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .contenido {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 25px auto;
+    }
+
+    .flan {
+      font-size: clamp(65px, 12vw, 125px);
+      flex: 1;
+      animation: flotar 3s ease-in-out infinite;
+    }
+
+    .datos {
+      flex: 2;
+      min-width: 0;
+      padding: 22px 12px;
+      background: #fff9dc;
+      border: 3px solid #f2a3b9;
+      border-radius: 28px;
+      box-shadow: 0 8px 18px #b8795730;
+    }
+
+    .datos h2 {
+      color: #d45d88;
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .datos p {
+      font-size: 20px;
+      overflow-wrap: anywhere;
+      margin-top: 8px;
+    }
+
+    .numero {
+      font-size: clamp(22px, 4vw, 32px) !important;
+      font-weight: bold;
+      color: #9b4e3e;
+    }
+
+    .adorno {
+      color: #e783a3;
+      font-size: 27px;
+      margin: 15px 0;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: #9b4e3e;
+    }
+
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (max-width: 520px) {
+      .contenido {
+        gap: 5px;
+      }
+
+      .datos {
+        padding: 15px 8px;
+      }
+
+      .datos h2 {
+        font-size: 18px;
+      }
+
+      .datos p {
+        font-size: 16px;
+      }
+
+      .flan {
+        font-size: 55px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="flores">✿ ❀ ✿</div>
-  <h1>Postres Martha Euan</h1>
-  <p>♡ Un dulce detalle para ti ♡</p>
-</header>
+  <main class="pagina">
+    <div class="flores">🌸 🌿 🌸</div>
 
-<section class="info">
-  <h2>Mi TikTok</h2>
-  <p>Martha Euan</p>
-  <h2>Mi número</h2>
-  <p>999 530 9290</p>
-</section>
+    <h1>Postres Martha Euan</h1>
 
-<div class="postres">
-  <section class="flan">
-    <div class="flores">✿ ❀</div>
-    <div class="dibujo">🍮</div>
-    <h2>Flan casero</h2>
-  </section>
-  <section class="flan">
-    <div class="flores">❀ ✿</div>
-    <div class="dibujo">🍮</div>
-    <h2>Hecho con cariño</h2>
-  </section>
-</div>
-<p class="flores">♡ Gracias por tu visita ♡</p>
+    <p class="subtitulo">
+      ♡ Hecho con amor y dulzura ♡
+    </p>
+
+    <div class="adorno">🌷 ✿ 🌷</div>
+
+    <section class="contenido">
+      <div class="flan">🍮</div>
+
+      <div class="datos">
+        <div class="adorno">🌸 ♡ 🌸</div>
+
+        <h2>Mi TikTok</h2>
+        <p>Martha euan</p>
+
+        <div class="adorno">✿ 💗 ✿</div>
+
+        <h2>Mi número</h2>
+        <p class="numero">999 530 9290</p>
+
+        <div class="adorno">🌷 ♡ 🌷</div>
+      </div>
+
+      <div class="flan">🍮</div>
+    </section>
+
+    <div class="flores">🌸 🌿 🌸</div>
+
+    <footer>
+      Dulces momentos para ti 💕
+    </footer>
+  </main>
 </body>
 </html>

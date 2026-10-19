@@ -4,178 +4,1273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postres Martha Euan</title>
+
+  <title>Postres Martha Euan | Postres hechos con amor</title>
+
+  <meta name="description" content="Descubre los deliciosos pasteles de galletas y flanes de Postres Martha Euan. Pedidos por WhatsApp y entregas a domicilio en Xtepén y Umán, Yucatán.">
+
+  <meta name="theme-color" content="#f7dce5">
 
   <style>
+    :root {
+      --rosa: #f7dce5;
+      --rosa-claro: #fff3f6;
+      --rosa-fuerte: #cf6489;
+      --rosa-oscuro: #ad456c;
+      --cafe: #69402f;
+      --cafe-oscuro: #42291f;
+      --crema: #fffaf4;
+      --blanco: #ffffff;
+      --texto: #554039;
+      --borde: #ecd9d0;
+      --sombra: 0 12px 35px rgba(105, 64, 47, .10);
+    }
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
-      margin: 0;
-      font-family: "Trebuchet MS", sans-serif;
-      background: #fff1a8;
-      color: #61351f;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--crema);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .contenedor {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .barra-superior {
+      background: var(--cafe);
+      color: white;
       text-align: center;
+      padding: 8px 12px;
+      font-size: .87rem;
     }
 
-    .pagina {
-      min-height: 100vh;
-      padding: 35px 15px;
-      overflow: hidden;
+    header {
+      background: rgba(255, 250, 244, .97);
+      border-bottom: 1px solid var(--borde);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    .navegacion {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 0;
+    }
+
+    .marca {
+      color: var(--cafe);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 900;
+      line-height: 1.3;
+    }
+
+    .marca span {
+      display: block;
+      color: var(--rosa-oscuro);
+      font-size: .75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: var(--cafe);
+      font-weight: bold;
+      font-size: .94rem;
+    }
+
+    .links a:hover {
+      color: var(--rosa-oscuro);
+    }
+
+    .boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--rosa-fuerte);
+      color: white !important;
+      padding: 12px 22px;
+      border-radius: 30px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform .2s, background .2s, box-shadow .2s;
+    }
+
+    .boton:hover {
+      background: var(--rosa-oscuro);
+      transform: translateY(-2px);
+      box-shadow: 0 7px 18px #cf648933;
+    }
+
+    .boton-cafe {
+      background: var(--cafe);
+    }
+
+    .boton-cafe:hover {
+      background: var(--cafe-oscuro);
+    }
+
+    .hero {
       position: relative;
+      overflow: hidden;
       background:
-        radial-gradient(circle, #ffe0e9 2px, transparent 3px)
-        0 0 / 35px 35px,
-        #fff1a8;
+        radial-gradient(circle at 8% 15%, #ffffffc9 0 5%, transparent 5.5%),
+        radial-gradient(circle at 92% 80%, #ffffffa0 0 8%, transparent 8.5%),
+        linear-gradient(135deg, #fff1f5, #f5d5df 60%, #f8e8d8);
+      padding: 85px 0;
     }
 
-    .flores {
-      color: #ee83a5;
-      font-size: 30px;
-      letter-spacing: 8px;
-      margin: 12px 0;
+    .hero-contenido {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      color: var(--rosa-oscuro);
+      background: white;
+      border: 1px solid #efd0db;
+      border-radius: 25px;
+      padding: 5px 14px;
+      font-size: .85rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      color: var(--cafe);
+      line-height: 1.25;
     }
 
     h1 {
-      color: #9b4e3e;
-      font-family: Georgia, serif;
-      font-size: clamp(32px, 7vw, 58px);
-      margin: 12px 0;
-      text-shadow: 2px 2px #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
     }
 
-    .subtitulo {
-      color: #d65f8b;
-      font-size: 20px;
-      font-weight: bold;
+    h1 span {
+      color: var(--rosa-oscuro);
     }
 
-    .contenido {
+    .hero p {
+      font-size: 1.08rem;
+      max-width: 560px;
+      margin-bottom: 25px;
+    }
+
+    .hero-botones {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-imagen {
+      position: relative;
+    }
+
+    .hero-imagen img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border: 9px solid white;
+      border-radius: 45% 45% 25px 25px;
+      box-shadow: var(--sombra);
+    }
+
+    .sello {
+      position: absolute;
+      bottom: 20px;
+      left: -20px;
+      background: white;
+      color: var(--cafe);
+      border-radius: 18px;
+      padding: 15px 19px;
+      box-shadow: var(--sombra);
+      font-weight: bold;
+      transform: rotate(-4deg);
+    }
+
+    .seccion {
+      padding: 80px 0;
+    }
+
+    .seccion-rosa {
+      background: var(--rosa-claro);
+    }
+
+    .titulo-seccion {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 42px;
+    }
+
+    .titulo-seccion .pequeno {
+      color: var(--rosa-oscuro);
+      text-transform: uppercase;
+      font-size: .8rem;
+      letter-spacing: 2px;
+      font-weight: 900;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin: 9px 0 12px;
+    }
+
+    .titulo-seccion p {
+      color: #78665e;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .producto {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      transition: transform .25s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto-imagen {
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+      background: var(--rosa);
+    }
+
+    .producto-imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .producto:hover .producto-imagen img {
+      transform: scale(1.04);
+    }
+
+    .producto-etiqueta {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: white;
+      color: var(--rosa-oscuro);
+      padding: 6px 13px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: .8rem;
+    }
+
+    .producto-contenido {
+      padding: 25px;
+    }
+
+    .producto h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+      margin-bottom: 10px;
+    }
+
+    .producto-descripcion {
+      color: #78665e;
+      min-height: 55px;
+    }
+
+    .producto-pie {
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .precio {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: var(--rosa-oscuro);
+    }
+
+    .precio small {
+      display: block;
+      font-size: .72rem;
+      font-weight: normal;
+      color: #78665e;
+    }
+
+    .beneficios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      max-width: 1000px;
-      margin: 25px auto;
     }
 
-    .flan {
-      font-size: clamp(65px, 12vw, 125px);
-      flex: 1;
-      animation: flotar 3s ease-in-out infinite;
+    .beneficio {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 20px;
+      padding: 28px 20px;
+      text-align: center;
     }
 
-    .datos {
-      flex: 2;
-      min-width: 0;
-      padding: 22px 12px;
-      background: #fff9dc;
-      border: 3px solid #f2a3b9;
-      border-radius: 28px;
-      box-shadow: 0 8px 18px #b8795730;
+    .beneficio .icono {
+      font-size: 2.3rem;
+      margin-bottom: 10px;
     }
 
-    .datos h2 {
-      color: #d45d88;
-      font-size: 23px;
+    .beneficio h3 {
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+
+    .beneficio p {
+      color: #78665e;
+      font-size: .95rem;
+    }
+
+    .entregas {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .entregas-imagen img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: var(--sombra);
+    }
+
+    .entregas-texto h2 {
+      margin-bottom: 16px;
+    }
+
+    .localidad {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      border: 1px solid var(--borde);
+      padding: 13px 16px;
+      border-radius: 14px;
+      margin-top: 12px;
+    }
+
+    .localidad strong {
+      color: var(--cafe);
+    }
+
+    .contacto {
+      background: linear-gradient(140deg, #f8dce5, #fff0e5);
+    }
+
+    .contacto-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .contacto-info {
+      padding: 15px 0;
+    }
+
+    .contacto-info h2 {
+      margin-bottom: 15px;
+    }
+
+    .contacto-info p {
+      margin-bottom: 18px;
+    }
+
+    .numero-grande {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--cafe);
+    }
+
+    .formulario {
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: var(--sombra);
+    }
+
+    .formulario h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.6rem;
       margin-bottom: 8px;
     }
 
-    .datos p {
-      font-size: 20px;
-      overflow-wrap: anywhere;
-      margin-top: 8px;
+    .formulario > p {
+      color: #78665e;
+      margin-bottom: 18px;
     }
 
-    .numero {
-      font-size: clamp(22px, 4vw, 32px) !important;
+    .campo {
+      margin-bottom: 16px;
+    }
+
+    .campo label {
+      display: block;
       font-weight: bold;
-      color: #9b4e3e;
+      color: var(--cafe);
+      margin-bottom: 6px;
     }
 
-    .adorno {
-      color: #e783a3;
-      font-size: 27px;
-      margin: 15px 0;
+    .campo input,
+    .campo select,
+    .campo textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--borde);
+      background: #fffdfa;
+      border-radius: 12px;
+      outline: none;
+      color: var(--texto);
+    }
+
+    .campo input:focus,
+    .campo select:focus,
+    .campo textarea:focus {
+      border-color: var(--rosa-fuerte);
+      box-shadow: 0 0 0 3px #cf64891c;
+    }
+
+    .campo textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .campos-dobles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .total {
+      background: var(--rosa-claro);
+      border: 1px dashed var(--rosa-fuerte);
+      border-radius: 14px;
+      padding: 13px 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .total strong {
+      color: var(--rosa-oscuro);
+      font-size: 1.2rem;
+    }
+
+    .formulario .boton {
+      width: 100%;
+    }
+
+    .aviso {
+      font-size: .78rem;
+      color: #78665e;
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .preguntas {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 15px;
+      padding: 17px 20px;
+      margin-bottom: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--cafe);
+      font-weight: bold;
+    }
+
+    details p {
+      padding-top: 12px;
+      color: #78665e;
+    }
+
+    .llamada-final {
+      background: var(--cafe);
+      color: white;
+      padding: 55px 20px;
+      text-align: center;
+    }
+
+    .llamada-final h2 {
+      color: white;
+    }
+
+    .llamada-final p {
+      margin: 12px 0 24px;
     }
 
     footer {
-      margin-top: 30px;
-      color: #9b4e3e;
+      background: #352219;
+      color: #f9e9df;
+      text-align: center;
+      padding: 30px 18px;
     }
 
-    @keyframes flotar {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+    footer strong {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    .whatsapp-flotante {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: #208b55;
+      color: white;
+      border-radius: 40px;
+      padding: 13px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 6px 22px #0002;
+    }
+
+    .whatsapp-flotante:hover {
+      background: #176d42;
+    }
+
+    @media (max-width: 800px) {
+      .hero-contenido,
+      .entregas,
+      .contacto-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-contenido {
+        gap: 35px;
+      }
+
+      .hero-imagen {
+        max-width: 520px;
+        margin: auto;
+        width: 100%;
+      }
+
+      .hero-imagen img {
+        height: 320px;
+      }
+
+      .links {
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .navegacion {
+        flex-direction: column;
+      }
+
+      .beneficios {
+        grid-template-columns: 1fr;
+      }
+
+      .entregas-imagen {
+        order: 2;
+      }
     }
 
     @media (max-width: 520px) {
-      .contenido {
-        gap: 5px;
+      .productos {
+        grid-template-columns: 1fr;
       }
 
-      .datos {
-        padding: 15px 8px;
+      .producto-imagen {
+        height: 240px;
       }
 
-      .datos h2 {
-        font-size: 18px;
+      .seccion {
+        padding: 58px 0;
       }
 
-      .datos p {
-        font-size: 16px;
+      .formulario {
+        padding: 21px;
       }
 
-      .flan {
-        font-size: 55px;
+      .campos-dobles {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .links a {
+        font-size: .85rem;
+      }
+
+      .hero-botones .boton {
+        width: 100%;
+      }
+
+      .whatsapp-flotante {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 15px;
+      }
+
+      .sello {
+        left: -5px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="pagina">
-    <div class="flores">🌸 🌿 🌸</div>
 
-    <h1>Postres Martha Euan</h1>
+  <div class="barra-superior">
+    🌸 Postres preparados con cariño · Xtepén y Umán, Yucatán 🌸
+  </div>
 
-    <p class="subtitulo">
-      ♡ Hecho con amor y dulzura ♡
-    </p>
+  <header>
+    <div class="contenedor navegacion">
+      <a class="marca" href="#inicio">
+        🌸 Postres Martha Euan
+        <span>Un dulce momento</span>
+      </a>
 
-    <div class="adorno">🌷 ✿ 🌷</div>
+      <nav class="links" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#entregas">Entregas</a>
+        <a href="#contacto">Pedidos</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="contenido">
-      <div class="flan">🍮</div>
+  <main>
 
-      <div class="datos">
-        <div class="adorno">🌸 ♡ 🌸</div>
+    <section class="hero" id="inicio">
+      <div class="contenedor hero-contenido">
+        <div>
+          <span class="etiqueta">♡ Un toque dulce para tu día ♡</span>
 
-        <h2>Mi TikTok</h2>
-        <p>Martha euan</p>
+          <h1>
+            Momentos dulces,<br>
+            hechos con <span>amor.</span>
+          </h1>
 
-        <div class="adorno">✿ 💗 ✿</div>
+          <p>
+            Bienvenido a Postres Martha Euan. Encuentra ese antojito
+            especial para disfrutar en casa, compartir con tu familia
+            o sorprender a alguien querido.
+          </p>
 
-        <h2>Mi número</h2>
-        <p class="numero">999 530 9290</p>
+          <div class="hero-botones">
+            <a href="#menu" class="boton">🍰 Ver menú</a>
+            <a href="https://wa.me/529995309290"
+               class="boton boton-cafe"
+               target="_blank"
+               rel="noopener noreferrer">
+              💬 Contactar
+            </a>
+          </div>
+        </div>
 
-        <div class="adorno">🌷 ♡ 🌷</div>
+        <div class="hero-imagen">
+          <img
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85"
+            alt="Pastel decorado para una ocasión especial"
+            fetchpriority="high">
+
+          <div class="sello">
+            ♡ Hecho con cariño ♡
+          </div>
+        </div>
       </div>
-
-      <div class="flan">🍮</div>
     </section>
 
-    <div class="flores">🌸 🌿 🌸</div>
+    <section class="seccion" id="menu">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="pequeno">Nuestros favoritos</span>
+          <h2>Un menú para endulzarte</h2>
+          <p>
+            Descubre nuestras opciones, elige tu favorita y
+            envíanos tu pedido directamente por WhatsApp.
+          </p>
+        </div>
 
-    <footer>
-      Dulces momentos para ti 💕
-    <p style="color:#d45f88; font-size:22px; font-weight:bold;">
-  🚚 ¡Entregas a domicilio!
-</p>
-<p style="color:#9b4e3e; font-size:18px;">
-  📍 Xtepén, Umán, Yucatán
-</p>  </footer>
+        <div class="productos">
+
+          <article class="producto">
+            <div class="producto-imagen">
+              <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85"
+                alt="Imagen ilustrativa de un pastel"
+                loading="lazy">
+
+              <span class="producto-etiqueta">🍪 Para compartir</span>
+            </div>
+
+            <div class="producto-contenido">
+              <h3>Pastel de galletas</h3>
+
+              <p class="producto-descripcion">
+                Una opción dulce para acompañar tus reuniones,
+                celebraciones y momentos especiales.
+              </p>
+
+              <div class="producto-pie">
+                <div class="precio">
+                  $250
+                  <small>Pesos mexicanos</small>
+                </div>
+
+                <button
+                  type="button"
+                  class="boton"
+                  onclick="elegirProducto('pastel')">
+                  Pedir ahora
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="producto">
+            <div class="producto-imagen">
+              <img
+                src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=85"
+                alt="Imagen ilustrativa de un postre cremoso"
+                loading="lazy">
+
+              <span class="producto-etiqueta">🍮 Un clásico</span>
+            </div>
+
+            <div class="producto-contenido">
+              <h3>Flan</h3>
+
+              <p class="producto-descripcion">
+                Un postre clásico, ideal para disfrutar después
+                de la comida o compartir con tus seres queridos.
+              </p>
+
+              <div class="producto-pie">
+                <div class="precio">
+                  $150
+                  <small>Pesos mexicanos</small>
+                </div>
+
+                <button
+                  type="button"
+                  class="boton"
+                  onclick="elegirProducto('flan')">
+                  Pedir ahora
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p style="text-align:center; margin-top:25px; font-size:.9rem; color:#78665e;">
+          Los precios corresponden a los indicados en este menú.
+          Consulta por WhatsApp cualquier duda sobre tu pedido.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion seccion-rosa" id="nosotros">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="pequeno">Con cariño para ti</span>
+          <h2>¿Por qué elegirnos?</h2>
+          <p>
+            Queremos que pedir algo dulce sea una experiencia
+            sencilla, agradable y especial.
+          </p>
+        </div>
+
+        <div class="beneficios">
+          <article class="beneficio">
+            <div class="icono">💗</div>
+            <h3>Atención cercana</h3>
+            <p>
+              Puedes comunicarte con nosotros para consultar
+              tu pedido y resolver tus dudas.
+            </p>
+          </article>
+
+          <article class="beneficio">
+            <div class="icono">🍰</div>
+            <h3>Opciones dulces</h3>
+            <p>
+              Elige entre nuestro pastel de galletas
+              y nuestro flan.
+            </p>
+          </article>
+
+          <article class="beneficio">
+            <div class="icono">🏡</div>
+            <h3>Entrega a domicilio</h3>
+            <p>
+              Consulta los detalles de entrega para
+              Xtepén y Umán, Yucatán.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="entregas">
+      <div class="contenedor entregas">
+        <div class="entregas-imagen">
+          <img
+            src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+            alt="Dulces y postres para compartir"
+            loading="lazy">
+        </div>
+
+        <div class="entregas-texto">
+          <span class="etiqueta">Tu antojo hasta tu hogar</span>
+          <h2>¡Tenemos entregas a domicilio!</h2>
+
+          <p>
+            Haz tu pedido y consulta con nosotros los detalles
+            de entrega en las siguientes localidades:
+          </p>
+
+          <div class="localidad">
+            <span>📍</span>
+            <div>
+              <strong>Xtepén, Yucatán</strong>
+              <div>Consulta disponibilidad por WhatsApp.</div>
+            </div>
+          </div>
+
+          <div class="localidad">
+            <span>📍</span>
+            <div>
+              <strong>Umán, Yucatán</strong>
+              <div>Consulta disponibilidad por WhatsApp.</div>
+            </div>
+          </div>
+
+          <p style="margin-top:18px;">
+            El costo y horario de entrega se pueden confirmar
+            directamente al realizar tu pedido.
+          </p>
+
+          <a
+            class="boton"
+            style="margin-top:15px;"
+            href="https://wa.me/529995309290?text=Hola%2C%20quiero%20consultar%20las%20entregas%20a%20domicilio."
+            target="_blank"
+            rel="noopener noreferrer">
+            Consultar entregas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion contacto" id="contacto">
+      <div class="contenedor contacto-grid">
+
+        <div class="contacto-info">
+          <span class="etiqueta">Estamos para atenderte</span>
+
+          <h2>¡Haz tu pedido!</h2>
+
+          <p>
+            Completa el formulario y se preparará un mensaje
+            con los detalles de tu pedido para enviarlo por WhatsApp.
+          </p>
+
+          <p>
+            <strong>📱 Nuestro WhatsApp</strong><br>
+            <a class="numero-grande"
+               href="https://wa.me/529995309290"
+               target="_blank"
+               rel="noopener noreferrer">
+              999 530 9290
+            </a>
+          </p>
+
+          <p>
+            <strong>📍 Zonas de entrega</strong><br>
+            Xtepén y Umán, Yucatán.
+          </p>
+
+          <p>
+            💗 ¡Gracias por elegir Postres Martha Euan!
+          </p>
+        </div>
+
+        <div class="formulario">
+          <h3>Datos de tu pedido 🍰</h3>
+          <p>Llena los campos para continuar por WhatsApp.</p>
+
+          <form id="formularioPedido">
+
+            <div class="campo">
+              <label for="nombre">Tu nombre *</label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                placeholder="¿Cómo te llamas?"
+                maxlength="80"
+                autocomplete="name"
+                required>
+            </div>
+
+            <div class="campo">
+              <label for="producto">Selecciona tu postre *</label>
+              <select id="producto" name="producto" required>
+                <option value="">Elige una opción</option>
+                <option value="pastel">Pastel de galletas — $250</option>
+                <option value="flan">Flan — $150</option>
+              </select>
+            </div>
+
+            <div class="campos-dobles">
+              <div class="campo">
+                <label for="cantidad">Cantidad *</label>
+                <select id="cantidad" name="cantidad" required>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="zona">Localidad *</label>
+                <select id="zona" name="zona" required>
+                  <option value="">Selecciona</option>
+                  <option value="Xtepén, Yucatán">Xtepén</option>
+                  <option value="Umán, Yucatán">Umán</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="direccion">Dirección o referencia *</label>
+              <textarea
+                id="direccion"
+                name="direccion"
+                placeholder="Escribe tu dirección o una referencia"
+                maxlength="300"
+                autocomplete="street-address"
+                required></textarea>
+            </div>
+
+            <div class="campo">
+              <label for="fecha">Fecha deseada (opcional)</label>
+              <input
+                id="fecha"
+                name="fecha"
+                type="date">
+            </div>
+
+            <div class="campo">
+              <label for="notas">Notas adicionales (opcional)</label>
+              <textarea
+                id="notas"
+                name="notas"
+                placeholder="¿Quieres agregar algún detalle?"
+                maxlength="300"></textarea>
+            </div>
+
+            <div class="total">
+              <span>Total estimado de productos</span>
+              <strong id="total">$0 MXN</strong>
+            </div>
+
+            <button type="submit" class="boton">
+              💬 Continuar por WhatsApp
+            </button>
+
+            <p class="aviso">
+              El pedido no se envía automáticamente. Revisa el mensaje
+              en WhatsApp y pulsa enviar para confirmar tu solicitud.
+              La entrega se confirma por separado.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="seccion" id="preguntas">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="pequeno">Queremos ayudarte</span>
+          <h2>Preguntas frecuentes</h2>
+          <p>Información útil antes de hacer tu pedido.</p>
+        </div>
+
+        <div class="preguntas">
+          <details>
+            <summary>¿Cuánto cuesta el pastel de galletas?</summary>
+            <p>El precio del pastel de galletas es de $250 MXN.</p>
+          </details>
+
+          <details>
+            <summary>¿Cuánto cuesta el flan?</summary>
+            <p>El precio del flan es de $150 MXN.</p>
+          </details>
+
+          <details>
+            <summary>¿En qué lugares entregan?</summary>
+            <p>
+              Las localidades indicadas son Xtepén y Umán, Yucatán.
+              Pregunta por WhatsApp para confirmar la entrega.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Cómo puedo hacer un pedido?</summary>
+            <p>
+              Selecciona tu producto, completa el formulario
+              y continúa por WhatsApp para enviar tu solicitud.
+            </p>
+          </details>
+
+          <details>
+            <summary>¿El costo de entrega está incluido?</summary>
+            <p>
+              El costo de entrega no está incluido en el total estimado
+              de los productos. Confírmalo directamente por WhatsApp.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="llamada-final">
+      <div class="contenedor">
+        <h2>Un dulce detalle te espera 💗</h2>
+        <p>
+          Elige tu postre favorito y comunícate con nosotros.
+        </p>
+
+        <a
+          class="boton"
+          style="background:white;color:#69402f !important;"
+          href="https://wa.me/529995309290"
+          target="_blank"
+          rel="noopener noreferrer">
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </section>
+
   </main>
+
+  <footer>
+    <p><strong>🌸 Postres Martha Euan 🌸</strong></p>
+    <p>Momentos dulces, hechos con amor.</p>
+    <p>📱 WhatsApp: 999 530 9290</p>
+    <p>🚚 Entregas a domicilio en Xtepén y Umán, Yucatán.</p>
+    <p style="margin-top:15px;font-size:.85rem;">
+      © 2026 Postres Martha Euan. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <a
+    class="whatsapp-flotante"
+    href="https://wa.me/529995309290"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar a Postres Martha Euan por WhatsApp">
+    <span>💬</span>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    const WHATSAPP = "529995309290";
+
+    const productos = {
+      pastel: {
+        nombre: "Pastel de galletas",
+        precio: 250
+      },
+      flan: {
+        nombre: "Flan",
+        precio: 150
+      }
+    };
+
+    const selectorProducto = document.getElementById("producto");
+    const selectorCantidad = document.getElementById("cantidad");
+    const totalElemento = document.getElementById("total");
+
+    function actualizarTotal() {
+      const producto = productos[selectorProducto.value];
+      const cantidad = Number(selectorCantidad.value);
+
+      const total = producto
+        ? producto.precio * cantidad
+        : 0;
+
+      totalElemento.textContent =
+        "$" + total.toLocaleString("es-MX") + " MXN";
+    }
+
+    function elegirProducto(tipo) {
+      selectorProducto.value = tipo;
+      actualizarTotal();
+
+      document.getElementById("contacto").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    selectorProducto.addEventListener("change", actualizarTotal);
+    selectorCantidad.addEventListener("change", actualizarTotal);
+
+    const fechaInput = document.getElementById("fecha");
+
+    // Evita seleccionar una fecha anterior al día actual.
+    const hoy = new Date();
+    const fechaLocal = [
+      hoy.getFullYear(),
+      String(hoy.getMonth() + 1).padStart(2, "0"),
+      String(hoy.getDate()).padStart(2, "0")
+    ].join("-");
+
+    fechaInput.min = fechaLocal;
+
+    document.getElementById("formularioPedido")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value.trim();
+        const tipo = selectorProducto.value;
+        const cantidad = Number(selectorCantidad.value);
+        const zona = document.getElementById("zona").value;
+        const direccion = document.getElementById("direccion").value.trim();
+        const fecha = fechaInput.value;
+        const notas = document.getElementById("notas").value.trim();
+
+        if (!productos[tipo] || !nombre || !zona || !direccion) {
+          alert("Por favor, completa todos los campos obligatorios.");
+          return;
+        }
+
+        const producto = productos[tipo];
+        const total = producto.precio * cantidad;
+
+        const lineas = [
+          "¡Hola! Quiero hacer un pedido en Postres Martha Euan. 🌸",
+          "",
+          "👤 Nombre: " + nombre,
+          "🍰 Producto: " + producto.nombre,
+          "🔢 Cantidad: " + cantidad,
+          "💵 Precio por unidad: $" + producto.precio + " MXN",
+          "🧾 Total estimado de productos: $" + total + " MXN",
+          "📍 Localidad: " + zona,
+          "🏡 Dirección o referencia: " + direccion,
+          "📅 Fecha deseada: " + (fecha || "Por confirmar"),
+          "📝 Notas: " + (notas || "Ninguna"),
+          "",
+          "Quisiera confirmar la disponibilidad y los detalles de entrega."
+        ];
+
+        const mensaje = encodeURIComponent(lineas.join("\n"));
+        const url = "https://wa.me/" + WHATSAPP + "?text=" + mensaje;
+
+        window.open(url, "_blank");
+      });
+
+    actualizarTotal();
+  </script>
+
 </body>
 </html>
